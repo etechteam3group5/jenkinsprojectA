@@ -1,0 +1,13 @@
+Steps to contribute to a project:
+-Using vscode, open a folder for the project on the local pc.
+-cd into the local repository using wsl for windows-based system.
+-Clone the main repository for the project from GitHub into the local repository  using $git clone url
+-Confirm you are on the main branch with $git branch.
+-Create a new branch and Switch into the new branch with $git checkout -b branchname
+-Create or modify the intended files.
+-Check new additions in working area with $git status
+-Move to staging area with $git add
+-Commit changes with a message to local repository with $git commit -m
+-Use $git push to create and upstream branch of the modified repository.
+-Switch to GitHub, navigate to the project repo, create a pull request and assign to the approving engineer.
+-After approval, merge the new branch with existing (main) branch.  
