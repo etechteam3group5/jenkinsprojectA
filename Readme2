@@ -4,7 +4,7 @@ Steps to contribute to a project:
 -Clone the main repository for the project from GitHub into the local repository  using $git clone url
 -Confirm you are on the main branch with $git branch.
 -Create a new branch and Switch into the new branch with $git checkout -b branchname
--Create or make changes to the intended files.
+-Create or modify the intended files.
 -Check new additions in working area with $git status
 -Move to staging area with $git add
 -Commit changes with a message to local repository with $git commit -m
