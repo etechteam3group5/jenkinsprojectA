@@ -10,4 +10,4 @@ Steps to contribute to a project:
 -Commit changes with a message to local repository with $git commit -m
 -Use $git push to create and upstream branch of the modified repository.
 -Switch to GitHub, navigate to the project repo, create a pull request and assign to the approving engineer.
--After approval, merge the new branch with existing (main) branch.
+-After approval, merge the new branch with existing (main) branch.  
