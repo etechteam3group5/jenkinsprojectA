@@ -1,57 +1,56 @@
 pipeline {
 	agent any
 		stages{
-			stage('1-Clone the Repository - Maxwell Chinedu'){
+			stage('1-Clone Repository - Maxwell Chinedu'){
 				steps{
 					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/etechteam3group5/jenkinsprojectA.git']]])
 				}
 			}
 			stage('2-Greetings'){
 				steps{
-					echo "We are Team 3 Group 5"
+					echo "We are Team3 Group5"
 				}
 			}
-			stage('3-User check - Christiana Gabriels'){
+			stage('3-User Check - Christiana Gabriels'){
 				steps{
-					logname
-					whoami
+					sh 'whoami'
+					sh 'date'
 				}
 			}
-			stage('4-startup check - Waisu Lawal'){
+			stage('4- directory check -Waisu Lawal'){
 				steps{
-					date
-					pwd
-					ls
+					sh "pwd"
+					sh "ls"
 				}
 			}
-			stage('5-Process Monitor - Tunde Onafowokan'){
+			stage('5-Process check - Tunde Onowofokan'){
 				steps{
-					ps -ef
-					sudo systemctl status jenkins
+					sh 'ps -ef'
+					sh 'sudo systemctl status jenkins'
 				}
 			}
-			stage('6-Ssh daemon Check - Chima Ikemelu'){
+			stage('6-Ssh daemon check - Chima Ikemelu'){
 				steps{
-					cat /etc/ssh/sshd_config
-					sudo systemctl status sshd
+					sh 'cat /etc/ssh/sshd_config'
+					sh 'sudo systemctl status sshd'
 				}
 			}
-			stage('7- Disk usage check - Gregory Rotilli'){
+			stage('7-Volume check -Gregory Rotilli'){
 				steps{
-					du -h
-					df -h
+					sh 'lsblk'
+					sh 'df -h'
 				}
 			}
-			stage('8-Cpu check - Chizoba'){
+			stage('8-Network Check - Chizoba'){
 				steps{
-					top
-					lscpu
+					sh 'ip a'
+					sh 'netstat'
 				}
 			}
-			stage('9- memory check - Valentine Erondu'){
+			stage('9-Memory Check - Valentine Erondu'){
 				steps{
-					free -g
-					free -m
+					sh 'free -g'
+					sh 'free -m'
 					
 				}
 			}
