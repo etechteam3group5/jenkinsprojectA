@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 		stages{
-			stage('1-Team3-Group5'){
+			stage('1-Clone the Repository'){
 				steps{
 					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/etechteam3group5/jenkinsprojectA.git']]])
 				}
