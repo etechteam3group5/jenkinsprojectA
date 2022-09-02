@@ -43,8 +43,8 @@ pipeline {
 			}
 			stage('9-Valentine Erondu'){
 				steps{
-					echo "member"
-                    sh './systemctl.sh'
+					   sh "./maxscr.sh"
+					
 				}
 			}
 		}
