@@ -24,7 +24,7 @@ pipeline {
 					sh 'sudo systemctl status jenkins'
 				}
 			}
-			stage('5-Ssh daemon check - Chima Ikemelu'){
+			stage('5-Sshd check - Chima Ikemelu'){
 				steps{
 					sh 'cat /etc/ssh/sshd_config'
 					sh 'sudo systemctl status sshd'
